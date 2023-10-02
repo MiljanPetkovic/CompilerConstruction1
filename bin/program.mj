@@ -1,0 +1,57 @@
+program MJProgram
+	const int x=2 , y=3, z =4, w= 6;
+	//const char c1= 'c';
+	//const bool b=true;
+	bool ba;
+	int niz1[];
+	char nizChar[];
+	int val1, val2, val3;
+	int niz2[];
+	char c1, c2, c3;
+{
+
+
+	int main(int parm1, int parm2) int promenljiva; int x;  {
+		
+		x = 3 ;
+		
+		print(2);
+	}
+	
+	void f() int promenljiva1; char promenljiva2; {	
+		val1 = 10;
+		//val1 = niz1[1] * niz1[2]  * niz1[3];
+		val1 =   (5  + val1) + (val1 * val2);
+		val1 = (5  + val1) + niz1[1]+(val1 * val2) ;
+		//c1=c2;
+		read( val1 ) ;
+		read (niz1[2]) ;
+		//read(niz1['c']);
+		//g = 'a' + c2;
+		print(2);
+		print(c1,4);
+		print(niz1[1]);
+		val1 = niz1[1];
+		//val1 = nizChar[1];
+		val1++;
+		val1 = 1;
+		//nizChar[1]++;
+		//niz1++;
+		//niz1= nizChar;
+		//niz1= val1;
+		ba = niz1.findAny(5);
+		//val1 = niz1.findAny(5);
+		//ba = niz1.findAny('c');
+		//ba = val1.findAny(5);
+		//print(niz1); greska
+		//print(2 + 'f');
+		//print(niz1[3]);
+		niz1 = new int [ 5 ] ;
+	//	a--;
+		//b1 = niz1.findAny(niz2[1]);
+	//	cc = 'h'+ niz2[2] + niz2[1] + 'g';
+		
+		
+	}
+	
+}

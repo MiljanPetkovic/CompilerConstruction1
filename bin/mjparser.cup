@@ -1,0 +1,251 @@
+
+
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+parser code {:
+
+	boolean errorDetected;
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+
+
+:}
+
+init with {:
+	errorDetected = false;
+:}
+
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+terminal PROG, LBRACE, RBRACE, SEMI,CONST, LPAREN, RPAREN, EQUAL,SEARCH,  RETURN, PLUS, COMMA, PRINT, VOID,  NEW, READ, CONTINUE, BREAK;
+terminal Integer NUMBER;
+terminal String IDENT;
+terminal Character CHAR_CONST;
+terminal Integer BOOL_CONST;
+terminal VERTICALBAR, RSBRACE, GREATER, STAR,  EXCLAMATION, MINUS, PERCENT, LESS,DOT , FINDANY,   LSBRACE, AMPERSAND,SLASH;
+
+nonterminal  DeclList, MethodDeclList, Decl, Assign;
+nonterminal FormPars, StmtList, FormalParamList, FormalParamDecl, Statement, DesigList;
+nonterminal Addop,  ActPars, ActualParamList, Sign;
+nonterminal Matched, Unmatched, Mulop, DesignatorStatement, Assgnop, FindStart;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodeTypeName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj SingleVarDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj SingleConstDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj VarDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj VariablesDeclaration;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj VarDeclList;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj SingleDesignator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ArrName;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct FactorList;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct SngTerm;
+
+Program ::= (Program) PROG ProgName DeclList LBRACE:programLbrace MethodDeclList RBRACE;
+
+ProgName ::= (ProgName) IDENT:ProgName;
+
+DeclList ::= (DeclarationList) DeclList  Decl
+			|
+			(NoDeclarationList) /* epsilon */
+			;
+
+Decl ::= (ConstantsDeclaration) CONST Type:constType ConstDecl SEMI
+			|
+			(VariablesDeclarationMain ) VariablesDeclaration
+			;
+			
+VarDeclList ::= (VariablesDecarationlList) VarDeclList:vdl  VariablesDeclaration:vd
+			|
+			(NoVariablesDecarationlList) /* epsilon */
+			;
+			
+VariablesDeclaration ::= (VariablesDeclaration) Type:varType VarDecl SEMI;
+			
+Type ::= (Type) IDENT:typeName;
+
+ConstDecl ::= (ConstDeclaration) ConstDecl COMMA SingleConstDecl
+			|
+			(SingleConstDeclaration) SingleConstDecl
+			;
+				
+SingleConstDecl ::= (CharDeclaration) IDENT:charName EQUAL CHAR_CONST:charValue
+			|
+			(NumDeclaration) IDENT:numName EQUAL NUMBER:numValue
+			| 
+			(BoolDeclaration) IDENT:boolName EQUAL BOOL_CONST:boolValue
+			;
+
+VarDecl ::= (VarDeclaration) VarDecl COMMA SingleVarDecl
+			|
+			(SingleVarDeclaration) SingleVarDecl
+			;
+				
+SingleVarDecl ::= (VariableDeclaration) IDENT:varName 
+			|
+			(ArrayVariableDeclaration) IDENT:arrayName LSBRACE RSBRACE;
+
+
+
+MethodDeclList ::= (MethodDeclarations) MethodDeclList MethodDecl
+			|
+			(NoMethodDeclarations) /* epsilon */
+			;
+			
+MethodDecl ::= (MethodDecl) MethodeTypeName LPAREN FormPars RPAREN VarDeclList LBRACE StmtList RBRACE ;
+			
+MethodeTypeName ::= (TypeName) Type:retType IDENT:methName
+			|
+			(VoidName) VOID:voidType IDENT:VoidmethName
+			;
+
+FormPars ::= (FormParamList) FormalParamList
+		  |
+		  (NoFormParam) /* epsilon */
+		  ;
+		  
+FormalParamList ::= (FormalParamDeclaration) FormalParamList COMMA FormalParamDecl
+			|
+			(SingleFormalParamDeclaration) FormalParamDecl
+			;
+
+FormalParamDecl ::= (VariableParam) Type IDENT:varName
+			|
+			(ArrayParam) Type IDENT:ArrayName LSBRACE RSBRACE;
+		
+StmtList ::= (StatementList) StmtList Statement
+			|
+			(NoStatementList) /* epsilon */
+			;
+				
+Statement ::= (FindAnyStatement) Assign:assign EQUAL Designator:d2 DOT SEARCH LPAREN Expr RPAREN SEMI
+		   |
+		   (DesignatorStmt) DesignatorStatement SEMI
+		   |
+		   (PrintStmt) PRINT LPAREN Expr:printExpr RPAREN SEMI
+		   |
+		   (PrintStmtNumConst) PRINT LPAREN Expr:printNumExpr COMMA NUMBER RPAREN SEMI
+		   |
+		   (ReadStmt) READ LPAREN Designator RPAREN SEMI
+		   |
+		    (ErrorStmt) error SEMI:l
+		   {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
+		   ;
+		      
+		  
+
+		   
+DesignatorStatement ::= (Assignment)  Assign:assign EQUAL Expr:e 
+					|
+					(Increment) Designator:dgs PLUS PLUS 
+					|
+					(Decrement) Designator:dsg MINUS MINUS 
+					;
+				
+Assign ::= (Assign) Designator:desg ;
+
+			
+Expr ::= (AddExpr) Expr:te Addop SngTerm:sngt
+		|
+		(SingleTerm) SngTerm:st
+		;
+		
+SngTerm ::=(PositiveSingleTerm) Term:t
+		|
+		(MinusTermExpr) MINUS Term:t
+		;
+
+Term ::= (TermFactorList) FactorList:factorList;
+
+FactorList ::= (MulOpFactorList) FactorList:factorList Mulop Factor:factor
+			   |
+			   (SingleFactor) Factor:signleFactor
+			   ;
+
+Factor ::= (NumConst) NUMBER
+		|
+		(CharConst) CHAR_CONST
+		| 
+		(DesignatorFactor) Designator:dsg
+		|
+		(BoolConst) BOOL_CONST
+		|
+		(ParenFactor)LPAREN Expr:parenExpr RPAREN
+		|
+		(ArrayAlocation) NEW Type:t LSBRACE  Expr:e  RSBRACE
+		;	
+
+				
+Designator ::= (Designator) SingleDesignator:sd;
+
+
+
+SingleDesignator ::=(DesignatorType) IDENT:name
+			|
+			(DesignatorArray) ArrName:an LSBRACE Expr:e RSBRACE
+			;
+			
+ArrName ::=(ArrayName) IDENT:i;
+			
+
+Addop ::= (Addoperation) PLUS
+		| 
+		(Subop) MINUS
+		;
+		
+Mulop ::= (Muloper) STAR
+		|
+		(Divop) SLASH
+		|
+		(Modop) PERCENT
+		;
+
+Assgnop ::= (Equal) EQUAL;
+
+		
+		
+		
+		
+		
+

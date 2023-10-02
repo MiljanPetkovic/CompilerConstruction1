@@ -1,0 +1,41 @@
+program MJProgram
+	const int x=2 , y='c';
+	const char c1= 2;
+	const bool b=3;
+	int val1;
+	char charVar; 
+	int niz1[];
+	bool b;
+{
+
+
+	int main(int parm1, int parm2) int promenljiva; int x;  {
+		
+		val1 = charVar;
+		x = 5; //lokalno x pa moze
+		val1 = niz1[1] * niz1[2]  * niz1[3];
+		val1 =   (5  + val1) + (val1 * val2);
+		val1 =   (5  + val1) + (val1 * val1);
+		val1 = (5  + val1) + niz1 ;
+		c1=3;
+		read( val1 ) ;
+		read (niz1[2]) ;
+		read(niz1['c']);
+		val1= 'a' + c2;
+		charVar = 'a'+ 'b';
+		//val1 = nizChar[1];
+		niz1++;
+		niz1= nizChar;
+		ba = niz1.findAny(5);
+		val1 = niz1.findAny(5);
+		ba = niz1.findAny('c');
+		ba = val1.findAny(5);
+		print(niz1); 
+		print(2 + 'f');
+		print(niz1[3]);
+		niz1 = new int [ 5 ] ;
+		varChar++;
+		cc = 'h'+ niz2[2] + niz2[1] + 'g';
+	}
+	
+}

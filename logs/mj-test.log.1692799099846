@@ -1,0 +1,17 @@
+INFO  15:58:16,615 - Compiling source file: C:\PP1Domaci\workspace\MJCompiler\test\testSemanticError.mj
+INFO  15:58:16,737 - #2 program
+INFO  15:58:16,738 - #21 MJProgram
+INFO  15:58:16,738 - #6 const
+INFO  15:58:16,740 - #21 int
+INFO  15:58:16,741 - #21 x
+INFO  15:58:16,743 - #9 =
+INFO  15:58:16,743 - #20 2
+INFO  15:58:16,743 - #13 ,
+INFO  15:58:16,744 - #21 y
+INFO  15:58:16,744 - #9 =
+INFO  15:58:16,744 - #20 3
+INFO  15:58:16,744 - #5 ;
+INFO  15:58:16,745 - #5 ;
+ERROR 15:58:16,745 - 
+Sintaksna greska na liniji 2
+ERROR 15:58:16,745 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2

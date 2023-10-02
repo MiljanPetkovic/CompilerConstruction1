@@ -1,0 +1,215 @@
+INFO  15:33:46,782 - Compiling source file: C:\PP1Domaci\workspace\MJCompiler\test\CodeGeneratorTest.mj
+INFO  15:33:46,918 - #2 program
+INFO  15:33:46,918 - #21 MJProgram
+INFO  15:33:46,919 - #21 int
+INFO  15:33:46,923 - #21 x
+INFO  15:33:46,925 - #5 ;
+INFO  15:33:46,926 - #21 int
+INFO  15:33:46,929 - #21 y
+INFO  15:33:46,929 - #5 ;
+INFO  15:33:46,929 - #3 {
+INFO  15:33:46,929 - #21 int
+INFO  15:33:46,932 - #21 k
+INFO  15:33:46,932 - #7 (
+INFO  15:33:46,933 - #8 )
+INFO  15:33:46,935 - #21 int
+INFO  15:33:46,938 - #21 c
+INFO  15:33:46,939 - #5 ;
+INFO  15:33:46,939 - #3 {
+INFO  15:33:46,939 - #21 c
+INFO  15:33:46,942 - #9 =
+INFO  15:33:46,948 - #20 2
+INFO  15:33:46,949 - #5 ;
+INFO  15:33:46,950 - #4 }
+INFO  15:33:46,952 - #21 int
+INFO  15:33:46,955 - #21 main
+INFO  15:33:46,955 - #7 (
+INFO  15:33:46,955 - #8 )
+INFO  15:33:46,955 - #3 {
+INFO  15:33:46,955 - #21 x
+INFO  15:33:46,955 - #9 =
+INFO  15:33:46,956 - #20 3
+INFO  15:33:46,956 - #5 ;
+INFO  15:33:46,956 - #14 print
+INFO  15:33:46,956 - #7 (
+INFO  15:33:46,956 - #20 1
+INFO  15:33:46,957 - #8 )
+INFO  15:33:46,957 - #5 ;
+INFO  15:33:46,957 - #14 print
+INFO  15:33:46,957 - #7 (
+INFO  15:33:46,958 - #20 2
+INFO  15:33:46,958 - #8 )
+INFO  15:33:46,958 - #5 ;
+INFO  15:33:46,959 - #4 }
+INFO  15:33:46,959 - #4 }
+INFO  15:33:46,976 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  DeclarationList(
+    DeclarationList(
+      NoDeclarationList(
+      ) [NoDeclarationList]
+      VariablesDeclarationMain(
+        VariablesDeclaration(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclaration(
+            VariableDeclaration(
+             x
+            ) [VariableDeclaration]
+          ) [SingleVarDeclaration]
+        ) [VariablesDeclaration]
+      ) [VariablesDeclarationMain]
+    ) [DeclarationList]
+    VariablesDeclarationMain(
+      VariablesDeclaration(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclaration(
+          VariableDeclaration(
+           y
+          ) [VariableDeclaration]
+        ) [SingleVarDeclaration]
+      ) [VariablesDeclaration]
+    ) [VariablesDeclarationMain]
+  ) [DeclarationList]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDeclarations(
+      ) [NoMethodDeclarations]
+      MethodDecl(
+        TypeName(
+          Type(
+           int
+          ) [Type]
+         k
+        ) [TypeName]
+        NoFormParam(
+        ) [NoFormParam]
+        VariablesDecarationlList(
+          NoVariablesDecarationlList(
+          ) [NoVariablesDecarationlList]
+          VariablesDeclaration(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclaration(
+              VariableDeclaration(
+               c
+              ) [VariableDeclaration]
+            ) [SingleVarDeclaration]
+          ) [VariablesDeclaration]
+        ) [VariablesDecarationlList]
+        StatementList(
+          NoStatementList(
+          ) [NoStatementList]
+          DesignatorStmt(
+            Assignment(
+              Assign(
+                Designator(
+                  DesignatorType(
+                   c
+                  ) [DesignatorType]
+                ) [Designator]
+              ) [Assign]
+              SingleTerm(
+                PositiveSingleTerm(
+                  TermFactorList(
+                    SingleFactor(
+                      NumConst(
+                       2
+                      ) [NumConst]
+                    ) [SingleFactor]
+                  ) [TermFactorList]
+                ) [PositiveSingleTerm]
+              ) [SingleTerm]
+            ) [Assignment]
+          ) [DesignatorStmt]
+        ) [StatementList]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      TypeName(
+        Type(
+         int
+        ) [Type]
+       main
+      ) [TypeName]
+      NoFormParam(
+      ) [NoFormParam]
+      NoVariablesDecarationlList(
+      ) [NoVariablesDecarationlList]
+      StatementList(
+        StatementList(
+          StatementList(
+            NoStatementList(
+            ) [NoStatementList]
+            DesignatorStmt(
+              Assignment(
+                Assign(
+                  Designator(
+                    DesignatorType(
+                     x
+                    ) [DesignatorType]
+                  ) [Designator]
+                ) [Assign]
+                SingleTerm(
+                  PositiveSingleTerm(
+                    TermFactorList(
+                      SingleFactor(
+                        NumConst(
+                         3
+                        ) [NumConst]
+                      ) [SingleFactor]
+                    ) [TermFactorList]
+                  ) [PositiveSingleTerm]
+                ) [SingleTerm]
+              ) [Assignment]
+            ) [DesignatorStmt]
+          ) [StatementList]
+          PrintStmt(
+            SingleTerm(
+              PositiveSingleTerm(
+                TermFactorList(
+                  SingleFactor(
+                    NumConst(
+                     1
+                    ) [NumConst]
+                  ) [SingleFactor]
+                ) [TermFactorList]
+              ) [PositiveSingleTerm]
+            ) [SingleTerm]
+          ) [PrintStmt]
+        ) [StatementList]
+        PrintStmt(
+          SingleTerm(
+            PositiveSingleTerm(
+              TermFactorList(
+                SingleFactor(
+                  NumConst(
+                   2
+                  ) [NumConst]
+                ) [SingleFactor]
+              ) [TermFactorList]
+            ) [PositiveSingleTerm]
+          ) [SingleTerm]
+        ) [PrintStmt]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  15:33:46,977 - ===================================
+INFO  15:33:46,983 - Deklarisana promenljiva x na liniji 2
+INFO  15:33:46,984 - Deklarisana promenljiva y na liniji 2
+INFO  15:33:46,984 - Funkcijak na liniji 5
+INFO  15:33:46,984 - Deklarisana promenljiva c na liniji 5
+INFO  15:33:46,984 - Izvrsena dodela vrednost na liniji 6
+INFO  15:33:46,985 - Funkcijamain na liniji 9
+INFO  15:33:46,985 - Izvrsena dodela vrednost na liniji 10
+INFO  15:33:46,985 - Print  na liniji 11
+INFO  15:33:46,985 - Print  na liniji 12
+INFO  15:33:46,985 - ===================================
+INFO  15:33:46,999 - Parsiranje uspesno zavrseno!

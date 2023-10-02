@@ -1,0 +1,336 @@
+INFO  15:56:28,124 - Compiling source file: C:\PP1Domaci\workspace\MJCompiler\test\testSyntaxError.mj
+INFO  15:56:28,245 - #2 program
+INFO  15:56:28,246 - #21 MJProgram
+INFO  15:56:28,246 - #6 const
+INFO  15:56:28,250 - #21 int
+INFO  15:56:28,250 - #21 br1
+INFO  15:56:28,253 - #9 =
+INFO  15:56:28,253 - #20 2
+INFO  15:56:28,253 - #5 ;
+INFO  15:56:28,254 - #21 int
+INFO  15:56:28,254 - #21 br2
+INFO  15:56:28,254 - #5 ;
+INFO  15:56:28,254 - #21 bool
+INFO  15:56:28,257 - #21 b
+INFO  15:56:28,257 - #5 ;
+INFO  15:56:28,257 - #21 int
+INFO  15:56:28,257 - #21 niz
+INFO  15:56:28,257 - #34 [
+INFO  15:56:28,257 - #25 ]
+INFO  15:56:28,258 - #5 ;
+INFO  15:56:28,258 - #3 {
+INFO  15:56:28,258 - #21 int
+INFO  15:56:28,260 - #21 main
+INFO  15:56:28,294 - #7 (
+INFO  15:56:28,295 - #21 int
+INFO  15:56:28,295 - #21 parm1
+INFO  15:56:28,295 - #13 ,
+INFO  15:56:28,296 - #21 int
+INFO  15:56:28,296 - #21 parm2
+INFO  15:56:28,296 - #8 )
+INFO  15:56:28,296 - #21 int
+INFO  15:56:28,299 - #21 promenljiva
+INFO  15:56:28,299 - #5 ;
+INFO  15:56:28,299 - #21 int
+INFO  15:56:28,299 - #21 x
+INFO  15:56:28,299 - #5 ;
+INFO  15:56:28,299 - #3 {
+INFO  15:56:28,300 - #21 x
+INFO  15:56:28,302 - #9 =
+INFO  15:56:28,306 - #20 3
+INFO  15:56:28,306 - #5 ;
+INFO  15:56:28,307 - #14 print
+INFO  15:56:28,308 - #7 (
+INFO  15:56:28,308 - #20 2
+INFO  15:56:28,308 - #8 )
+INFO  15:56:28,308 - #5 ;
+INFO  15:56:28,309 - #4 }
+INFO  15:56:28,309 - #15 void
+INFO  15:56:28,311 - #21 f
+INFO  15:56:28,311 - #7 (
+INFO  15:56:28,311 - #8 )
+INFO  15:56:28,314 - #21 int
+INFO  15:56:28,315 - #21 promenljiva1
+INFO  15:56:28,315 - #5 ;
+INFO  15:56:28,315 - #21 char
+INFO  15:56:28,315 - #21 promenljiva2
+INFO  15:56:28,315 - #5 ;
+INFO  15:56:28,315 - #3 {
+INFO  15:56:28,315 - #21 br2
+INFO  15:56:28,315 - #12 +
+INFO  15:56:28,315 - #29 -
+ERROR 15:56:28,316 - 
+Sintaksna greska na liniji 17
+INFO  15:56:28,316 - #5 ;
+INFO  15:56:28,316 - #21 br2
+INFO  15:56:28,316 - #12 +
+INFO  15:56:28,320 - #20 3
+ERROR 15:56:28,321 - Izvrsen oporavak do ; u liniji 17
+ERROR 15:56:28,323 - 
+Sintaksna greska na liniji 18
+INFO  15:56:28,324 - #5 ;
+INFO  15:56:28,324 - #21 b
+INFO  15:56:28,324 - #9 =
+INFO  15:56:28,324 - #21 niz
+ERROR 15:56:28,324 - Izvrsen oporavak do ; u liniji 18
+INFO  15:56:28,324 - #32 .
+INFO  15:56:28,324 - #21 find
+ERROR 15:56:28,324 - 
+Sintaksna greska na liniji 19
+INFO  15:56:28,324 - #7 (
+INFO  15:56:28,324 - #5 ;
+INFO  15:56:28,324 - #21 b
+INFO  15:56:28,324 - #9 =
+INFO  15:56:28,324 - #21 niz
+ERROR 15:56:28,325 - Izvrsen oporavak do ; u liniji 19
+INFO  15:56:28,325 - #32 .
+INFO  15:56:28,325 - #10 findAny
+INFO  15:56:28,325 - #7 (
+INFO  15:56:28,325 - #8 )
+ERROR 15:56:28,325 - 
+Sintaksna greska na liniji 20
+INFO  15:56:28,325 - #5 ;
+INFO  15:56:28,325 - #21 br
+INFO  15:56:28,325 - #12 +
+INFO  15:56:28,325 - #9 =
+ERROR 15:56:28,325 - Izvrsen oporavak do ; u liniji 20
+ERROR 15:56:28,325 - 
+Sintaksna greska na liniji 21
+INFO  15:56:28,325 - #20 1
+INFO  15:56:28,326 - #5 ;
+INFO  15:56:28,326 - #4 }
+INFO  15:56:28,326 - #4 }
+ERROR 15:56:28,326 - Izvrsen oporavak do ; u liniji 21
+INFO  15:56:28,338 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  DeclarationList(
+    DeclarationList(
+      DeclarationList(
+        DeclarationList(
+          NoDeclarationList(
+          ) [NoDeclarationList]
+          ConstantsDeclaration(
+            Type(
+             int
+            ) [Type]
+            SingleConstDeclaration(
+              NumDeclaration(
+               br1
+               2
+              ) [NumDeclaration]
+            ) [SingleConstDeclaration]
+          ) [ConstantsDeclaration]
+        ) [DeclarationList]
+        VariablesDeclarationMain(
+          VariablesDeclaration(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclaration(
+              VariableDeclaration(
+               br2
+              ) [VariableDeclaration]
+            ) [SingleVarDeclaration]
+          ) [VariablesDeclaration]
+        ) [VariablesDeclarationMain]
+      ) [DeclarationList]
+      VariablesDeclarationMain(
+        VariablesDeclaration(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclaration(
+            VariableDeclaration(
+             b
+            ) [VariableDeclaration]
+          ) [SingleVarDeclaration]
+        ) [VariablesDeclaration]
+      ) [VariablesDeclarationMain]
+    ) [DeclarationList]
+    VariablesDeclarationMain(
+      VariablesDeclaration(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclaration(
+          ArrayVariableDeclaration(
+           niz
+          ) [ArrayVariableDeclaration]
+        ) [SingleVarDeclaration]
+      ) [VariablesDeclaration]
+    ) [VariablesDeclarationMain]
+  ) [DeclarationList]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDeclarations(
+      ) [NoMethodDeclarations]
+      MethodDecl(
+        TypeName(
+          Type(
+           int
+          ) [Type]
+         main
+        ) [TypeName]
+        FormParamList(
+          FormalParamDeclaration(
+            SingleFormalParamDeclaration(
+              VariableParam(
+                Type(
+                 int
+                ) [Type]
+               parm1
+              ) [VariableParam]
+            ) [SingleFormalParamDeclaration]
+            VariableParam(
+              Type(
+               int
+              ) [Type]
+             parm2
+            ) [VariableParam]
+          ) [FormalParamDeclaration]
+        ) [FormParamList]
+        VariablesDecarationlList(
+          VariablesDecarationlList(
+            NoVariablesDecarationlList(
+            ) [NoVariablesDecarationlList]
+            VariablesDeclaration(
+              Type(
+               int
+              ) [Type]
+              SingleVarDeclaration(
+                VariableDeclaration(
+                 promenljiva
+                ) [VariableDeclaration]
+              ) [SingleVarDeclaration]
+            ) [VariablesDeclaration]
+          ) [VariablesDecarationlList]
+          VariablesDeclaration(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclaration(
+              VariableDeclaration(
+               x
+              ) [VariableDeclaration]
+            ) [SingleVarDeclaration]
+          ) [VariablesDeclaration]
+        ) [VariablesDecarationlList]
+        StatementList(
+          StatementList(
+            NoStatementList(
+            ) [NoStatementList]
+            DesignatorStmt(
+              Assignment(
+                Assign(
+                  Designator(
+                    DesignatorType(
+                     x
+                    ) [DesignatorType]
+                  ) [Designator]
+                ) [Assign]
+                SingleTerm(
+                  PositiveSingleTerm(
+                    TermFactorList(
+                      SingleFactor(
+                        NumConst(
+                         3
+                        ) [NumConst]
+                      ) [SingleFactor]
+                    ) [TermFactorList]
+                  ) [PositiveSingleTerm]
+                ) [SingleTerm]
+              ) [Assignment]
+            ) [DesignatorStmt]
+          ) [StatementList]
+          PrintStmt(
+            SingleTerm(
+              PositiveSingleTerm(
+                TermFactorList(
+                  SingleFactor(
+                    NumConst(
+                     2
+                    ) [NumConst]
+                  ) [SingleFactor]
+                ) [TermFactorList]
+              ) [PositiveSingleTerm]
+            ) [SingleTerm]
+          ) [PrintStmt]
+        ) [StatementList]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      VoidName(
+       f
+      ) [VoidName]
+      NoFormParam(
+      ) [NoFormParam]
+      VariablesDecarationlList(
+        VariablesDecarationlList(
+          NoVariablesDecarationlList(
+          ) [NoVariablesDecarationlList]
+          VariablesDeclaration(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclaration(
+              VariableDeclaration(
+               promenljiva1
+              ) [VariableDeclaration]
+            ) [SingleVarDeclaration]
+          ) [VariablesDeclaration]
+        ) [VariablesDecarationlList]
+        VariablesDeclaration(
+          Type(
+           char
+          ) [Type]
+          SingleVarDeclaration(
+            VariableDeclaration(
+             promenljiva2
+            ) [VariableDeclaration]
+          ) [SingleVarDeclaration]
+        ) [VariablesDeclaration]
+      ) [VariablesDecarationlList]
+      StatementList(
+        StatementList(
+          StatementList(
+            StatementList(
+              StatementList(
+                NoStatementList(
+                ) [NoStatementList]
+                ErrorStmt(
+                ) [ErrorStmt]
+              ) [StatementList]
+              ErrorStmt(
+              ) [ErrorStmt]
+            ) [StatementList]
+            ErrorStmt(
+            ) [ErrorStmt]
+          ) [StatementList]
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [StatementList]
+        ErrorStmt(
+        ) [ErrorStmt]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  15:56:28,338 - ===================================
+INFO  15:56:28,345 - Deklarisana konstanta br1 = 2 na liniji 2
+INFO  15:56:28,346 - Deklarisana promenljiva br2 na liniji 3
+INFO  15:56:28,346 - Deklarisana promenljiva b na liniji 4
+INFO  15:56:28,346 - Deklarisana niz niz na liniji 5
+INFO  15:56:28,346 - Funkcijamain na liniji 9
+INFO  15:56:28,346 - Deklarisan parametar parm1 na liniji 9
+INFO  15:56:28,346 - Deklarisan parametar parm2 na liniji 9
+INFO  15:56:28,346 - Deklarisana promenljiva promenljiva na liniji 9
+INFO  15:56:28,346 - Deklarisana promenljiva x na liniji 9
+INFO  15:56:28,347 - Izvrsena dodela vrednost na liniji 11
+INFO  15:56:28,347 - Print  na liniji 13
+INFO  15:56:28,347 - Funkcijaf na liniji 16
+INFO  15:56:28,347 - Deklarisana promenljiva promenljiva1 na liniji 16
+INFO  15:56:28,347 - Deklarisana promenljiva promenljiva2 na liniji 16
+INFO  15:56:28,347 - ===================================
+ERROR 15:56:28,348 - Parsiranje NIJE uspesno zavrseno!

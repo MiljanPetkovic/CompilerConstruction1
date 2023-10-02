@@ -1,0 +1,23 @@
+INFO  15:47:28,299 - Compiling source file: C:\PP1Domaci\workspace\MJCompiler\test\testSyntaxError.mj
+INFO  15:47:28,385 - #2 program
+INFO  15:47:28,385 - #21 MJProgram
+INFO  15:47:28,385 - #6 const
+INFO  15:47:28,389 - #21 int
+INFO  15:47:28,390 - #21 br1
+INFO  15:47:28,392 - #9 =
+INFO  15:47:28,392 - #20 2
+INFO  15:47:28,393 - #5 ;
+INFO  15:47:28,393 - #21 int
+INFO  15:47:28,394 - #21 br2
+INFO  15:47:28,394 - #5 ;
+INFO  15:47:28,394 - #21 bool
+INFO  15:47:28,397 - #21 b
+INFO  15:47:28,397 - #5 ;
+INFO  15:47:28,398 - #21 int
+INFO  15:47:28,398 - #21 niz
+INFO  15:47:28,398 - #34 [
+INFO  15:47:28,398 - #25 ]
+INFO  15:47:28,398 - #3 {
+ERROR 15:47:28,399 - 
+Sintaksna greska na liniji 6
+ERROR 15:47:28,399 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6
